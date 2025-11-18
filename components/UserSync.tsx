@@ -7,14 +7,10 @@ const UserSync = () => {
   const { isLoaded, isSignedIn } = useUser();
 
   useEffect(() => {
-    console.log("🔵 UserSync useEffect triggered:", { isLoaded, isSignedIn });
-
     const handleUserSync = async () => {
       if (isLoaded && isSignedIn) {
-        console.log("🟢 Calling syncUser...");
         try {
-          const res = await syncUser();
-          console.log("🟢 syncUser success:", res);
+          await syncUser();
         } catch (err) {
           console.log("🔴 syncUser error:", err);
         }
