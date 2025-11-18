@@ -47,7 +47,7 @@ function PricingSection() {
                   <h3 className="text-2xl font-bold">Free</h3>
                   <div className="flex items-end gap-1">
                     <span className="text-4xl font-bold">
-                      <span className="text-lg mr-1">₹</span>0
+                      <span className="text-lg mr-1">$</span>0
                     </span>
                     <span className="text-muted-foreground mb-1">/month</span>
                   </div>
@@ -100,7 +100,7 @@ function PricingSection() {
                   <h3 className="text-2xl font-bold">AI Basic</h3>
                   <div className="flex items-end gap-1">
                     <span className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-                      <span className="text-lg mr-1">₹</span>499
+                      <span className="text-lg mr-1">$</span>9
                     </span>
                     <span className="text-muted-foreground mb-1">/month</span>
                   </div>
@@ -128,15 +128,7 @@ function PricingSection() {
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircleIcon className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                    <span className="text-sm">Emotional assessment</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                     <span className="text-sm">Priority support</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                    <span className="text-sm">Chat history & recordings</span>
                   </div>
                 </div>
               </div>
@@ -151,7 +143,7 @@ function PricingSection() {
                   <h3 className="text-2xl font-bold">AI Pro</h3>
                   <div className="flex items-end gap-1">
                     <span className="text-4xl font-bold">
-                      <span className="text-lg mr-1">₹</span>998
+                      <span className="text-lg mr-1">$</span>19
                     </span>
                     <span className="text-muted-foreground mb-1">/month</span>
                   </div>
@@ -178,18 +170,9 @@ function PricingSection() {
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircleIcon className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                    <span className="text-sm">
-                      Advanced mental health analysis
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                     <span className="text-sm">Personalized wellness plans</span>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                    <span className="text-sm">24/7 priority AI support</span>
-                  </div>
+
                   <div className="flex items-start gap-3">
                     <CheckCircleIcon className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                     <span className="text-sm">Detailed wellness reports</span>
