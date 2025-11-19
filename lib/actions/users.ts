@@ -2,43 +2,78 @@
 
 import { currentUser } from "@clerk/nextjs/server";
 import { prisma } from "../prisma";
+import { Prisma } from "@prisma/client";
 
 export async function syncUser() {
+  let user;
   try {
-    const user = await currentUser();
-    if (!user) return;
+    user = await currentUser();
+    if (!user) return null;
 
-    const email = user.emailAddresses?.[0]?.emailAddress ?? null;
-    const phone = user.phoneNumbers?.[0]?.phoneNumber ?? null;
-
+    const email = user.emailAddresses[0].emailAddress;
     if (!email) {
-      console.log(
-        "syncUser: clerk user has no email, aborting create -",
-        user.id
-      );
+      console.log("NO Email found for User", user.id);
       return null;
     }
 
-    const dbUser = await prisma.user.upsert({
+    // Check From Clerk
+    const existingUserByClerkId = await prisma.user.findUnique({
       where: { clerkId: user.id },
-      update: {
-        firstName: user.firstName ?? undefined,
-        lastName: user.lastName ?? undefined,
-        email: email ?? undefined,
-        phone: phone ?? undefined,
-      },
-      create: {
-        clerkId: user.id,
-        firstName: user.firstName ?? undefined,
-        lastName: user.lastName ?? undefined,
-        email,
-        phone,
-      },
     });
 
-    return dbUser;
+    if (existingUserByClerkId) {
+      return await prisma.user.update({
+        where: { clerkId: user.id },
+        data: {
+          firstName: user.firstName,
+          lastName: user.lastName,
+          email,
+          phone: user.phoneNumbers?.[0]?.phoneNumber,
+        },
+      });
+    }
+
+    // Check By email
+    const existingByEmail = await prisma.user.findUnique({
+      where: { email },
+    });
+
+    if (existingByEmail) {
+      // Email exist करता है दूसरे clerkId से
+      // ClerkId update कर दें (user ने दूसरे method से login किया होगा)
+      console.log(`Updating clerkId for existing email: ${email}`);
+      return await prisma.user.update({
+        where: { email },
+        data: {
+          clerkId: user.id,
+          firstName: user.firstName,
+          lastName: user.lastName,
+          phone: user.phoneNumbers?.[0]?.phoneNumber,
+        },
+      });
+    }
+
+    return await prisma.user.create({
+      data: {
+        clerkId: user.id,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        email,
+        phone: user.phoneNumbers[0]?.phoneNumber,
+      },
+    });
   } catch (error) {
-    console.log("Error in syncUser server Action", error);
+    if (error instanceof Prisma.PrismaClientKnownRequestError) {
+      if (error.code === "P2002") {
+        console.error("Unique constraint failed:", error.meta);
+        // Fallback: existing user return करें
+        const email = user?.emailAddresses?.[0]?.emailAddress;
+        if (email) {
+          return await prisma.user.findUnique({ where: { email } });
+        }
+      }
+    }
+    console.error("Error in syncUser server action", error);
     throw error;
   }
 }
