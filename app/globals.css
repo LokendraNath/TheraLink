@@ -200,3 +200,16 @@ body {
     cursor: pointer;
   }
 }
+
+@keyframes sound-wave {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.5);
+  }
+}
+.animate-sound-wave {
+  animation: sound-wave 0.5s ease-in-out infinite;
+}
