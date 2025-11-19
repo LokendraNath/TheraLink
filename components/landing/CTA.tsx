@@ -4,7 +4,7 @@ import { MicIcon, CalendarIcon } from "lucide-react";
 
 function CTA() {
   return (
-    <section className="relative py-20 px-6 overflow-hidden bg-gradient-to-br from-muted/10 via-background to-muted/5">
+    <section className="relative py-20 px-6 overflow-hidden bg-linear-to-br from-muted/10 via-background to-muted/5">
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,hsl(var(--primary)/0.03),transparent_70%)]"></div>
 
@@ -21,7 +21,7 @@ function CTA() {
               </div>
 
               <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-                <span className="bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text text-transparent">
+                <span className="bg-linear-to-br from-foreground to-foreground/70 bg-clip-text text-transparent">
                   Your mental wellness
                 </span>
                 <br />
@@ -70,7 +70,7 @@ function CTA() {
               {/* Main Image */}
               <div className="relative">
                 {/* Subtle glow */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-2xl blur-xl scale-110"></div>
+                <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-transparent rounded-2xl blur-xl scale-110"></div>
 
                 <Image
                   src="/cta.png"
@@ -83,7 +83,7 @@ function CTA() {
               </div>
 
               {/* Decorative Elements */}
-              <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-gradient-to-br from-primary/10 to-primary/5 rounded-full blur-lg"></div>
+              <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-linear-to-br from-primary/10 to-primary/5 rounded-full blur-lg"></div>
             </div>
           </div>
         </div>

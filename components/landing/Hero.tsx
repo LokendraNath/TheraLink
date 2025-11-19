@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className="relative h-screen flex items-center overflow-hidden pt-20">
       {/* Grid BG */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/5 to-primary/5">
+      <div className="absolute inset-0 bg-linear-to-br from-background via-muted/5 to-primary/5">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] opacity-20"></div>
       </div>
 
@@ -31,7 +31,7 @@ const Hero = () => {
 
                 {/* Main Heading */}
                 <h1 className="text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl font-bold tracking-tight lg:leading-18">
-                  <span className="bg-gradient-to-br from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent">
+                  <span className="bg-linear-to-br from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent">
                     Your 24/7
                   </span>
                   <br />
@@ -39,7 +39,7 @@ const Hero = () => {
                     Mental Wellness
                   </span>
                   <br />
-                  <span className="bg-gradient-to-br from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent">
+                  <span className="bg-linear-to-br from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent">
                     Companion
                   </span>
                 </h1>
@@ -141,8 +141,8 @@ const Hero = () => {
             {/* Right Section - Hero Image */}
             <div className="relative lg:pl-8 flex content-end">
               {/* Gradient ORBS */}
-              <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl rotate-45 blur-xl"></div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-2xl"></div>
+              <div className="absolute -top-4 -left-4 w-24 h-24 bg-linear-to-br from-primary/20 to-primary/10 rounded-2xl rotate-45 blur-xl"></div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-linear-to-br from-primary/15 to-primary/5 rounded-full blur-2xl"></div>
 
               <Image
                 src={"/hero.png"}
