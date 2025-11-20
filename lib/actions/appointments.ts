@@ -63,7 +63,7 @@ export async function getUserAppointments() {
         user: { select: { firstName: true, lastName: true, email: true } },
         doctor: { select: { name: true, imageUrl: true } },
       },
-      orderBy: [{ date: "desc" }, { time: "asc" }],
+      orderBy: [{ date: "asc" }, { time: "asc" }],
     });
 
     return appointments.map(transformAppointment);
