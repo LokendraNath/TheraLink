@@ -1,5 +1,10 @@
 "use client";
-import { createDoctor, getDoctors, updateDoctor } from "@/lib/actions/doctors";
+import {
+  createDoctor,
+  getAvailbleDoctors,
+  getDoctors,
+  updateDoctor,
+} from "@/lib/actions/doctors";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
 export function useGetDoctors() {
@@ -31,5 +36,13 @@ export function useUpdateDoctor() {
       queryClient.invalidateQueries({ queryKey: ["getDoctors"] });
     },
     onError: (error) => console.log("Error while Update a doctor", error),
+  });
+}
+
+// Get available doctors for appointment
+export function useAvailbleDoctors() {
+  return useQuery({
+    queryKey: ["getAvailbleDoctors"],
+    queryFn: getAvailbleDoctors,
   });
 }
