@@ -51,9 +51,7 @@ const TimeSelectionStep = ({
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center gap-4 mb-10">
-        <h2 className="text-2xl font-semibold">Select Date & Time</h2>
-      </div>
+      <h2 className="text-2xl font-semibold mb-10">Select Date & Time</h2>
 
       <div className="grid lg:grid-cols-2 gap-8 mb-10">
         {/* Appointment type Selection */}

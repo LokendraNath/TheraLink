@@ -1,10 +1,11 @@
 "use client";
 
 import {
+  bookAppointment,
   getAppointments,
   getBookedTimeSlots,
 } from "@/lib/actions/appointments";
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
 export function useGetAppointments() {
   const result = useQuery({
@@ -19,5 +20,17 @@ export function useBookedTimeSlots(doctorId: string, date: string) {
     queryKey: ["getBookedTimeSlots"],
     queryFn: () => getBookedTimeSlots(doctorId, date),
     enabled: !!doctorId && !!date, // only run query when both doctorid and date provide
+  });
+}
+
+export function useBookAppointment() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: bookAppointment,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["getUserAppointments"] });
+    },
+    onError: (error) => console.error("Failed To book Appointment: ", error),
   });
 }
