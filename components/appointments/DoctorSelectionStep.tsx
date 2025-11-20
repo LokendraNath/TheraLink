@@ -7,7 +7,13 @@ import {
   CardTitle,
 } from "../ui/card";
 import Image from "next/image";
-import { ArrowRight, MapPinIcon, PhoneIcon, StarIcon } from "lucide-react";
+import {
+  ArrowRight,
+  ChevronRight,
+  MapPinIcon,
+  PhoneIcon,
+  StarIcon,
+} from "lucide-react";
 import { Badge } from "../ui/badge";
 import { DoctorCardsLoading } from "./DoctorCardsLoading";
 import { Button } from "../ui/button";
@@ -94,7 +100,7 @@ const DoctorSelectionStep = ({
         <div className="flex justify-end">
           <Button className="group gap-2 items-center" onClick={onContinue}>
             Select Time{" "}
-            <ArrowRight className="w-10 h-10 transform translate-x-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-2" />
+            <ChevronRight className="w-10 h-10 transform translate-x-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-2" />
           </Button>
         </div>
       )}

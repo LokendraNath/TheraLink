@@ -3,6 +3,7 @@
 import DoctorSelectionStep from "@/components/appointments/DoctorSelectionStep";
 import DoctorSection from "@/components/appointments/DoctorSelectionStep";
 import ProgressSteps from "@/components/appointments/ProgressSteps";
+import TimeSelectionStep from "@/components/appointments/TimeSelectionStep";
 import Navbar from "@/components/Navbar";
 import { useState } from "react";
 
@@ -48,6 +49,20 @@ const AppointmentsPage = () => {
             selectedTherapiestId={selectedTherapiestId}
             onContinue={() => setCurrentStep(2)}
             onSelectTherapist={handleSelectTherapist}
+          />
+        )}
+
+        {currentStep === 2 && selectedTherapiestId && (
+          <TimeSelectionStep
+            selectedTherapiestId={selectedTherapiestId}
+            selectedDate={selectedDate}
+            selectedTime={selectedTime}
+            selectedType={selectedType}
+            onBack={() => setCurrentStep(1)}
+            onContinue={() => setCurrentStep(3)}
+            onDateChange={setSelectedDate}
+            onTimeChange={setSelectedTime}
+            onTypeChange={setSelectedType}
           />
         )}
       </div>

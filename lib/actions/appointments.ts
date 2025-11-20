@@ -103,3 +103,23 @@ export async function getUserAppointmentStats() {
     return { totalAppointment: 0, completedAppointment: 0 };
   }
 }
+
+export async function getBookedTimeSlots(doctorId: string, date: string) {
+  try {
+    const appointments = await prisma.appointment.findMany({
+      where: {
+        doctorId,
+        date: new Date(date),
+        status: {
+          in: ["CONFIRM", "COMPLETED"], // consider both confirmed and completed appointments as blocking
+        },
+      },
+      select: { time: true },
+    });
+
+    return appointments.map((appointment) => appointment.time);
+  } catch (error) {
+    console.error("Error fetching booked time slots:", error);
+    return []; // return empty array if there's an error
+  }
+}
