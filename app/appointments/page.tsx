@@ -62,7 +62,32 @@ const AppointmentsPage = () => {
           // store the appointment details to show the modle
           setBookedAppointment(appointment);
 
-          // todo => Send email using resend
+          //  Send email using resend
+          try {
+            const emailResponse = await fetch("/api/send-appointment-email", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                userEmail: appointment.patientEmail,
+                doctorName: appointment.doctorName,
+                appointmentDate: format(
+                  new Date(appointment.date),
+                  "EEEE, MMMM d, yyyy"
+                ),
+                appointmentTime: appointment.time,
+                appointmentType: appointmentType?.name,
+                duration: appointmentType?.duration,
+                price: appointmentType?.price,
+              }),
+            });
+
+            if (!emailResponse.ok)
+              console.error("Failed to send confirmation email");
+          } catch (error) {
+            console.error("Error sending confirmation email:", error);
+          }
 
           // show the success modle
           setShowConfirmationModle(true);
@@ -128,6 +153,7 @@ const AppointmentsPage = () => {
             onConfirm={handleBookAppointment}
           />
         )}
+        
       </div>
 
       {/* SHOW EXISTING APPOINTMENTS FOR THE CURRENT USER */}
