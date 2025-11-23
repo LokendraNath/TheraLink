@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
+import { AppointmentConfirmationModal } from "@/components/appointments/AppointmentConfirmationModal";
 import BookingConfirmationStep from "@/components/appointments/BookingConfirmationStep";
 import DoctorSelectionStep from "@/components/appointments/DoctorSelectionStep";
 import DoctorSection from "@/components/appointments/DoctorSelectionStep";
@@ -153,8 +154,23 @@ const AppointmentsPage = () => {
             onConfirm={handleBookAppointment}
           />
         )}
-        
       </div>
+
+      {bookedAppointment && (
+        <AppointmentConfirmationModal
+          open={showConfirmationModle}
+          onOpenChange={setShowConfirmationModle}
+          appointmentDetails={{
+            doctorName: bookedAppointment.doctorName,
+            appointmentDate: format(
+              new Date(bookedAppointment.date),
+              "EEEE, MMMM d, yyyy"
+            ),
+            appointmentTime: bookedAppointment.time,
+            userEmail: bookedAppointment.patientEmail,
+          }}
+        />
+      )}
 
       {/* SHOW EXISTING APPOINTMENTS FOR THE CURRENT USER */}
       {userAppointments.length > 0 && (
