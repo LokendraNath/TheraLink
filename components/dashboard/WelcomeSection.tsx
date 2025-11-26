@@ -19,8 +19,8 @@ export default async function WelcomeSection() {
             {new Date().getHours() < 12
               ? "morning"
               : new Date().getHours() < 18
-              ? "afternoon"
-              : "evening"}
+                ? "afternoon"
+                : "evening"}
             , {user?.firstName}!
           </h1>
           <p className="text-muted-foreground">
@@ -30,7 +30,7 @@ export default async function WelcomeSection() {
         </div>
       </div>
 
-      <div className="lg:flex hidden items-center justify-center size-32 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full ">
+      <div className="lg:flex hidden items-center justify-center size-32 bg-linear-to-br from-primary/20 to-primary/10 rounded-full ">
         <Image
           src="/brain.png"
           alt="Theralink"
