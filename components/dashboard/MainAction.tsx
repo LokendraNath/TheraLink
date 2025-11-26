@@ -49,7 +49,7 @@ export default function MainActions() {
             className={buttonVariants({
               variant: "default",
               className:
-                "w-full mt-10 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white font-semibold py-3 rounded-xl shadow-lg py-5 text-xl hover:shadow-xl transition-all duration-300",
+                "w-full mt-10 bg-linear-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white font-semibold py-3 rounded-xl shadow-lg py-5 text-xl hover:shadow-xl transition-all duration-300",
             })}
           >
             <MessageSquareIcon className="mr-2 h-5 w-5" />

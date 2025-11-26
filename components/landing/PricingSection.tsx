@@ -16,7 +16,7 @@ function PricingSection() {
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary/5 to-primary/10 rounded-full border border-primary/10 backdrop-blur-sm mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-linear-to-r from-primary/5 to-primary/10 rounded-full border border-primary/10 backdrop-blur-sm mb-6">
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
             <span className="text-sm font-medium text-primary">
               Simple Pricing
@@ -27,7 +27,7 @@ function PricingSection() {
               Choose your
             </span>
             <br />
-            <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-primary to-primary/70 bg-clip-text text-transparent">
               AI therapy plan
             </span>
           </h2>
@@ -56,7 +56,7 @@ function PricingSection() {
                   </p>
                 </div>
                 <SignUpButton mode="modal">
-                  <Button className="w-full py-3 bg-gradient-to-r from-muted to-muted/80 text-foreground rounded-xl font-semibold">
+                  <Button className="w-full py-3 bg-linear-to-r from-muted to-muted/80 text-foreground rounded-xl font-semibold">
                     Get Started Free
                   </Button>
                 </SignUpButton>
@@ -89,7 +89,7 @@ function PricingSection() {
           <div className="relative group">
             {/* Popular Badge */}
             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
-              <div className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+              <div className="bg-linear-to-r from-primary to-primary/80 text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
                 Most Popular
               </div>
             </div>
@@ -99,7 +99,7 @@ function PricingSection() {
                 <div className="space-y-3">
                   <h3 className="text-2xl font-bold">AI Basic</h3>
                   <div className="flex items-end gap-1">
-                    <span className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                    <span className="text-4xl font-bold bg-linear-to-r from-primary to-primary/80 bg-clip-text text-transparent">
                       <span className="text-lg mr-1">$</span>9
                     </span>
                     <span className="text-muted-foreground mb-1">/month</span>
@@ -109,7 +109,7 @@ function PricingSection() {
                   </p>
                 </div>
 
-                <Button className="w-full py-3 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/95 hover:to-primary/85 text-primary-foreground rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+                <Button className="w-full py-3 bg-linear-to-r from-primary to-primary/90 hover:from-primary/95 hover:to-primary/85 text-primary-foreground rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
                   Start AI Basic
                 </Button>
 

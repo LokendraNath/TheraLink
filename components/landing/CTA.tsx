@@ -13,7 +13,7 @@ function CTA() {
           {/* Left Content */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-gradient-to-r from-primary/5 to-primary/10 rounded-full border border-primary/10">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-linear-to-r from-primary/5 to-primary/10 rounded-full border border-primary/10">
                 <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
                 <span className="text-xs font-medium text-primary">
                   Ready When You Are
@@ -25,7 +25,7 @@ function CTA() {
                   Your mental wellness
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-primary to-primary/70 bg-clip-text text-transparent">
                   journey starts here
                 </span>
               </h2>
@@ -40,7 +40,7 @@ function CTA() {
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <Button
                 size="lg"
-                className="px-6 py-3 font-semibold bg-gradient-to-r from-primary to-primary/90 hover:from-primary/95 hover:to-primary/85 shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl"
+                className="px-6 py-3 font-semibold bg-linear-to-r from-primary to-primary/90 hover:from-primary/95 hover:to-primary/85 shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl"
               >
                 <MicIcon className="mr-2 h-4 w-4" />
                 Start free chat
@@ -60,7 +60,7 @@ function CTA() {
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative">
               {/* Floating Badge */}
-              <div className="absolute -top-4 left-4 bg-gradient-to-r from-orange-500/90 to-orange-700/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-medium shadow-lg z-10">
+              <div className="absolute -top-4 left-4 bg-linear-to-r from-orange-500/90 to-orange-700/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-medium shadow-lg z-10">
                 <div className="flex items-center gap-1">
                   <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></div>
                   Available 24/7

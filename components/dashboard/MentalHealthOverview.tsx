@@ -56,7 +56,7 @@ const MentalHealthOverview = async () => {
             </div>
           </div>
 
-          <div className="mt-6 p-4 bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl border border-primary/20">
+          <div className="mt-6 p-4 bg-linear-to-r from-primary/10 to-primary/5 rounded-xl border border-primary/20">
             <div className="flex items-start gap-3">
               <div className="size-10 bg-primary/20 rounded-lg flex items-center justify-center shrink-0">
                 <MessageSquareIcon className="size-5 text-primary" />

@@ -7,7 +7,7 @@ function WhatToAsk() {
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-15">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary/5 to-primary/10 rounded-full border border-primary/10 backdrop-blur-sm mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-linear-to-r from-primary/5 to-primary/10 rounded-full border border-primary/10 backdrop-blur-sm mb-6">
             <MessageCircleIcon className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-primary">
               AI-Powered Conversations
@@ -18,7 +18,7 @@ function WhatToAsk() {
               Ask about
             </span>
             <br />
-            <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-primary to-primary/70 bg-clip-text text-transparent">
               anything Mental
             </span>
           </h2>
