@@ -148,7 +148,7 @@ function PricingSection() {
                     <span className="text-muted-foreground mb-1">/month</span>
                   </div>
                   <p className="text-muted-foreground">
-                    Unlimited AI consultations
+                    Unlimited AI consultations And Many More
                   </p>
                 </div>
 
