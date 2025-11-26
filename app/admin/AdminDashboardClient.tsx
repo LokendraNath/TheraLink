@@ -1,6 +1,7 @@
 "use client";
 import AdminState from "@/components/admin/AdminState";
 import DoctorManagment from "@/components/admin/DoctorManagment";
+import RecentAppointment from "@/components/admin/RecentAppointment";
 import Navbar from "@/components/Navbar";
 import { useGetAppointments } from "@/hooks/use-appointment";
 import { useGetDoctors } from "@/hooks/use-doctors";
@@ -64,6 +65,7 @@ const AdminDashboardClient = () => {
         />
 
         <DoctorManagment />
+        <RecentAppointment />
       </div>
     </div>
   );
