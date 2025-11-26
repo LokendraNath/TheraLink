@@ -73,7 +73,7 @@ function CTA() {
                 <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-transparent rounded-2xl blur-xl scale-110"></div>
 
                 <Image
-                  src="/cta.png"
+                  src="/email-robot.png"
                   alt="TheraLink AI Assistant"
                   width={300}
                   height={300}

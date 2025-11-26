@@ -117,7 +117,7 @@ function WhatToAsk() {
           <div className="bg-linear-to-br from-card/90 to-card/60 backdrop-blur-xl rounded-3xl p-4 border border-border/50 hover:border-primary/30 transition-all duration-500">
             <div className="flex items-center justify-center h-full">
               <Image
-                src="/confused.png"
+                src="/confused-robo.png"
                 alt="AI Assistant"
                 width={500}
                 height={500}

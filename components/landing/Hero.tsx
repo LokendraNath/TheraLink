@@ -145,7 +145,7 @@ const Hero = () => {
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-linear-to-br from-primary/15 to-primary/5 rounded-full blur-2xl"></div>
 
               <Image
-                src={"/hero.png"}
+                src={"/hero-robot.png"}
                 alt="TheraLink AI"
                 width={600}
                 height={600}
