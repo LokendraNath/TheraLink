@@ -69,7 +69,7 @@ const Hero = () => {
 
                 {/* User Testimonials */}
                 <div className="pt-4">
-                  <div className="flex items-center gap-6">
+                  <div className="flex items-center gap-15 md:gap-10">
                     {/* User Avatars */}
                     <div className="flex -space-x-3">
                       <Image

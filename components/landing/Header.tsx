@@ -15,7 +15,7 @@ const Header = () => {
             height={32}
             className="w-11"
           />
-          <span className="font-semibold text-lg tracking-widest">
+          <span className="hidden sm:block font-semibold text-lg tracking-widest">
             TheraLink
           </span>
         </Link>
