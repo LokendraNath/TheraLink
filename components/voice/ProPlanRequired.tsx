@@ -52,8 +52,8 @@ function ProPlanRequired() {
             <h3 className="text-2xl font-bold mb-4">Upgrade Required</h3>
             <p className="text-muted-foreground mb-6">
               The voice assistant feature is available to AI Pro and AI Basic
-              subscribers. Get instant dental advice through natural voice
-              conversations.
+              subscribers. Get instant mental wellness advice through natural
+              voice conversations.
             </p>
 
             <div className="space-y-4 mb-6">
@@ -63,7 +63,7 @@ function ProPlanRequired() {
               </div>
               <div className="flex items-center gap-3 justify-center">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-sm">Professional dental guidance</span>
+                <span className="text-sm">Professional mental guidance</span>
               </div>
               <div className="flex items-center gap-3 justify-center">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>

@@ -74,7 +74,7 @@ const AppointmentConfirmationEmail = ({
             <Text style={detailValue}>{price}</Text>
 
             <Text style={detailLabel}>Location</Text>
-            <Text style={detailValue}>Dental Center</Text>
+            <Text style={detailValue}>Mental Therapy Center</Text>
           </Section>
 
           <Text style={text}>

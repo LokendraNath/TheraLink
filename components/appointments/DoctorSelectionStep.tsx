@@ -88,7 +88,7 @@ const DoctorSelectionStep = ({
               </div>
               <p className="text-sm text-muted-foreground">
                 {therapist.bio ||
-                  "Experienced dental professional providing quality care."}
+                  "Experienced mental professional providing quality care."}
               </p>
               <Badge variant="secondary">Licensed Professional</Badge>
             </CardContent>
