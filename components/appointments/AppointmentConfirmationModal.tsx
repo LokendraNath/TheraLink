@@ -54,7 +54,7 @@ export function AppointmentConfirmationModal({
           <div className="flex flex-col items-center space-y-3">
             <div className="relative">
               <Image
-                src="/email-sent.png"
+                src="/email-robot.png"
                 alt="Email sent"
                 width={120}
                 height={120}
