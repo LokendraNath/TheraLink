@@ -33,19 +33,7 @@ const AppointmentConfirmationEmail = ({
       <Preview>Your Mental appointment has been confirmed</Preview>
       <Body style={main}>
         <Container style={container}>
-          <Section style={logoContainer}>
-            <Img
-              src="https://i.ibb.co/JRWnXSD0/brain.png"
-              width="50"
-              height="50"
-              alt="TheraLink"
-              style={logo}
-              className="object-cover"
-            />
-            <Text style={logoText}>TheraLink</Text>
-          </Section>
-
-          <Heading style={h1}>Appointment Confirmed! ✅</Heading>
+          <Heading style={h1}>Appointment Confirmed! 🧠✅</Heading>
 
           <Text style={text}>Hi there,</Text>
 
