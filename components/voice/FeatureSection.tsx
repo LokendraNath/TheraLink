@@ -21,7 +21,7 @@ const FeatureSection = () => {
             How to Use This
           </CardTitle>
           <CardDescription>
-            Simple steps to get started with voice assistance
+            Steps to get started with voice assistance
           </CardDescription>
         </CardHeader>
         <CardContent className="relative space-y-4">
