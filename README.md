@@ -2,7 +2,7 @@
 
 TheraLink AI is a modern therapy booking platform that blends traditional appointment scheduling with an AI wellness assistant. Users can book therapy sessions, interact with an AI voice agent, manage subscriptions, and receive automated emails — all inside a clean, responsive interface.
 
-![App Preview](./public/preview-project.png)
+![Preview](./public/preview-project.png)
 
 🔗 **Live Demo:** https://theralinkai.vercel.app/
 
