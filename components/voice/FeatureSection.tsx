@@ -18,7 +18,7 @@ const FeatureSection = () => {
             <div className="w-10 h-10 bg-linear-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center">
               <MicIcon className="h-5 w-5 text-primary" />
             </div>
-            How to Use
+            How to Use This
           </CardTitle>
           <CardDescription>
             Simple steps to get started with voice assistance
