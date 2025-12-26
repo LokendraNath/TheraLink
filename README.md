@@ -1,4 +1,4 @@
-# TheraLink AI – AI-Powered Therapy Booking Platform 🧠
+# TheraLink – AI-Powered Therapy Booking Platform 🧠
 
 TheraLink AI is a modern therapy booking platform that blends traditional appointment scheduling with an AI wellness assistant. Users can book therapy sessions, interact with an AI voice agent, manage subscriptions, and receive automated emails — all inside a clean, responsive interface.
 
